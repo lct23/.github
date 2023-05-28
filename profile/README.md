@@ -1,6 +1,8 @@
 ## EventLoop – проект для хакатона Лидеры Цифровой Трансформации 2023
 
-TODO: сюда вставить скриншот
+<img width="975" alt="event-loop" src="https://github.com/lct23/.github/assets/24827/7a037b4e-d2c5-4a65-8801-a03a205c5572">
+
+
 
 **Демо-стенд:** https://lct23.dev.40ants.com/  
 **Админка:** https://lct23.dev.40ants.com/admin/  
