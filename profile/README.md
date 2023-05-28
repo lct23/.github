@@ -30,6 +30,49 @@ TODO: сюда вставить скриншот
 - rating - тут лежат комментарии с оценками площадок и услуг, а так же он занимается рассчётом рейтинга площадок.
 - images - позволяет загружать и получать картинки. В MVP они хранятся локально, но для продакшн решения нужно будет сделать сохранение изображений в S3 совместимое хранилище СберКлауда.
 
+
+```mermaid
+graph TD;
+   subgraph backend
+   Passport
+   click Passport "https://github.com/lct23/backend/tree/master/passport" _blank
+   Events
+   click Events "https://github.com/lct23/backend/tree/master/events" _blank
+   Rating
+   click Rating "https://github.com/lct23/backend/tree/master/rating" _blank
+   Images
+   click Images "https://github.com/lct23/backend/tree/master/image-store" _blank
+   end
+   
+   subgraph frontend
+   Adminka;
+   click Adminka "https://github.com/lct23/backend/tree/master/admin" _blank
+   Frontend;
+   click Frontend "https://github.com/lct23/frontend" _blank
+   end
+   
+   subgraph cloud
+   ElasticSearch(((ElasticSearch)))
+   DB[(Postgres)]
+   S3[[S3]]
+   end
+   
+   Frontend --> Passport
+   Frontend --> Events
+   Frontend --> Rating
+   Frontend --> Images
+   
+   Adminka --> Passport
+   Adminka --> Events
+   Adminka --> Rating
+   
+   Events --> ElasticSearch
+   Events --> DB
+   Passport --> DB
+   Rating --> DB
+   Images --> S3
+```
+
 Общение микросервисов между собой и с фронтендом идёт по JSON-RPC, что позволяет быстро добавлять необходимый функционал, не тратя время на попытки вписать его в ограничения HTTP. Кроме того, этот протокол так же может быть использован поверх Websocket, для создания более динамичных фичей сайта.
 
 Фронтенд использует React.JS и Next.JS для server-side рендеринга. Это должно облегчить поисковую оптимизация и обеспечит сайту приток новых пользователей из поисковых систем типа Яндекс и Google.
@@ -37,5 +80,3 @@ TODO: сюда вставить скриншот
 Админка тоже использует server-side рендеринг, но построена на базе другого фреймворка - Reblocks, потому что в нём хорошо ориентируется наш бэкендер. Этот фреймворк позволяет быстро проверять идеи и реализовывать фичи, потому что всю бизнес-логику можно описывать на бэкенде, с использованием языка программирования Common Lisp.
 
 И микросервисы, и фронтенд собираются в Docker контейнеры и могут быть развёрнуты в любом "облаке".
-
-Вот так выглядит схема сервиса:
