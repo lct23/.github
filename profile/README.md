@@ -2,8 +2,9 @@
 
 TODO: сюда вставить скриншот
 
-Демо-стенд: https://lct23.dev.40ants.com/
-Админка: https://lct23.dev.40ants.com/admin/
+**Демо-стенд:** https://lct23.dev.40ants.com/  
+**Админка:** https://lct23.dev.40ants.com/admin/  
+
 Учётка пользователя с правами админа: логин `admin@mail.ru` пароль `test`.
 
 ### Что успели сделать за 264 часа!
