@@ -111,3 +111,12 @@ graph TD;
 * [Код UI виджетов](https://github.com/lct23/krasnodar/tree/master/server/src/widgets) – в них почти вся бизнес-логика
 * [Игры для знакомства с коллегами](https://github.com/lct23/krasnodar/tree/master/server/src/games)
 * [SQL запросы для отображения статистики](https://github.com/lct23/krasnodar/blob/master/server/src/analytics.lisp)
+
+## Несколько скринов с демо интерфейса
+
+### Дашборд HR сотрудника
+
+![](https://storage.yandexcloud.net/hrzero-files/lct-hr-dashboard.gif)
+
+### Игра помогающая лучше узнать коллег
+![](https://storage.yandexcloud.net/hrzero-files/lct-hr-game.gif)
