@@ -103,3 +103,11 @@ graph TD;
    CronJobProcessor --> CronJobCoordinator
    ImageStore --> S3
 ```
+
+## Что интересного есть в коде???
+
+* [Схема базы данных](https://github.com/lct23/krasnodar/blob/master/schema.sql)
+* [Код моделей данных](https://github.com/lct23/krasnodar/tree/master/server/src/models) – используем Common Lisp ORM [Mito](https://github.com/fukamachi/mito) 
+* [Код UI виджетов](https://github.com/lct23/krasnodar/tree/master/server/src/widgets) – в них почти вся бизнес-логика
+* [Игры для знакомства с коллегами](https://github.com/lct23/krasnodar/tree/master/server/src/games)
+* [SQL запросы для отображения статистики](https://github.com/lct23/krasnodar/blob/master/server/src/analytics.lisp)
